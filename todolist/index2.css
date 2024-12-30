@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f44900;
+  }
+  
+  .pricing-container {
+    text-align: center;
+    max-width: 800px;
+    width: 90%;
+  }
+  
+  .toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    margin: 0 10px;
+  }
+  
+  .switch input {
+    display: none;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #ba8809;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .pricing-plans {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .plan {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 300px;
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  .plan:hover {
+    transform: scale(1.05);
+  }
+  
+  .recommended {
+    border-color: #e6ee05;
+    box-shadow: 0 0 10px #e6ee05;
+  }
+  
+  .price {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 15px 0;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    background: #2400f0;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background:#e6ee05;
+  }
+  
+  @media (max-width: 600px) {
+    .pricing-plans {
+      flex-direction: column;
+    }
+  }
+  
